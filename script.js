@@ -1,4 +1,9 @@
-
+// const Characters = document.getElementById('length');
+// const generateEl = document.getElementById('generate');
+// const wantLower = document.getElementById('lowercase');
+// const wantUpper = document.getElementById('lowercase');
+// const wantNumbers = document.getElementById('lowercase');
+// const wantSymbols = document.getElementById('lowercase');
 
 
 var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -8,8 +13,12 @@ var symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "{", "}", "[", 
 
 var all = []
 
+// generateEl.addEventListener('click', () => {
+   
+// }) 
+
 var Characters = prompt("In Numbers, how many Characters do you want for your password?")
-var wantLower = confirm("Do you want lowerCase Letters in your password?");
+var wantLower = confirm("Do you want lowerCase letters in your password?")
 var wantUpper = confirm("Do you want upperCase Letters in your password?");
 var wantNumbers = confirm("Do you want numbers in your password?");
 var wantSymbols = confirm("Do you want symbols Letters in your password?");
