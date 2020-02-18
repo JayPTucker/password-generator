@@ -1,11 +1,12 @@
 // DOM ELEMENTS
 const Characters = document.getElementById('length');
-let generateEl = document.getElementById('generate-btn');
+const generateEl = document.getElementById('generate-btn');
 const wantLower = document.getElementById('lowercase');
 const wantUpper = document.getElementById('uppercase');
 const wantNumbers = document.getElementById('numbers');
 const wantSymbols = document.getElementById('symbols');
 const password = document.getElementById('passwordresult');
+const clearPass = document.getElementById('clearPass-btn')
 
 // GENERATOR ITEMS
 var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -36,8 +37,9 @@ generateEl.addEventListener('click', () => {
         results += (all[Math.floor(Math.random() * all.length)]);
     }
 
-    document.getElementById("passwordresult").value = results;
+    password.value = results;
 });
 
-// generateEl.addEventListener("click", myFunction);
-// generateEl.addEventListener("click", coolFunction);
+clearPass.addEventListener('click', () => {
+    password.value = "";
+})
