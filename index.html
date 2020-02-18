@@ -15,17 +15,27 @@
               <input type="number" min="1" max="50" id="characterAmountNumber">
               <div class="checkbox custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                <label class="custom-control-label" for="customSwitch1">Capital Letters</label>
+                <label class="custom-control-label" for="customSwitch1">Lowercase Letters</label>
               </div>
               <div class="checkbox custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitch2">
-                <label class="custom-control-label" for="customSwitch2">Numbers</label>
+                <label class="custom-control-label" for="customSwitch1">Capital Letters</label>
               </div>
               <div class="checkbox custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                <label class="custom-control-label" for="customSwitch2">Numbers</label>
+              </div>
+              <div class="checkbox custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch4">
                 <label class="custom-control-label" for="customSwitch3">Symbols</label>
               </div>
-              <button class="generatePass-btn" type="submit">Generate Password</button>
+              <button class="generatePass-btn" id="generate" type="submit">Generate Password</button>
+              <form>
+                <div class="form-group">
+                  <label for="formGroupExampleInput">Your Result</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Press Generate Password!">
+                </div>
+              </form>
           </div>
       </div>
   </div>

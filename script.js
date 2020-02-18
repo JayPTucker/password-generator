@@ -1,9 +1,20 @@
+// DOM ELEMENTS
+const resultEl = document.getElementById('formGroupExampleInput');
+const lengthEl = document.getElementById('characterAmountNumber');
+const lowercaseEl = document.getElementById('customSwitch1');
+const uppercaseEl = document.getElementById('customSwitch2');
+const numbersEl = document.getElementById('customSwitch3');
+const symbolsEl = document.getElementById('customSwitch4');
+const generateEl = document.getElementById('generate-btn');
+
 const randomFunc = {
     lower: getRandomLower,
     upper: getRandomUpper,
     number: getRandomNumber,
     symbol: getRandomSymbol
 };
+
+
 
 // Generator Functions
 
