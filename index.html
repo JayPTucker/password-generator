@@ -2,23 +2,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="Assets/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>JPT - Password Generator</title>
 </head>
 <body>
-    
-    <script>
-        var characters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
-        "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
-        "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-        var amountOfCharacters = prompt("How many Characters would you like in your password?")
 
-        // ------------------------
-        for (var i = 0; i < amountOfCharacters; i++) {
-                document.write(characters[Math.floor(Math.random() * characters.length)])
-        }
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="passwordGen col-md-3">
+              <h4 class="title">Password Generator</h4>
+              <input type="number" min="1" max="50" id="characterAmountNumber">
+              <div class="checkbox custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                <label class="custom-control-label" for="customSwitch1">Capital Letters</label>
+              </div>
+              <div class="checkbox custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                <label class="custom-control-label" for="customSwitch2">Numbers</label>
+              </div>
+              <div class="checkbox custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                <label class="custom-control-label" for="customSwitch3">Symbols</label>
+              </div>
+              <button class="generatePass-btn" type="submit">Generate Password</button>
+          </div>
+      </div>
+  </div>
 
-    </script>
-
-
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
