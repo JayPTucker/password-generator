@@ -1,37 +1,32 @@
-// DOM ELEMENTS
-const resultEl = document.getElementById('formGroupExampleInput');
-const lengthEl = document.getElementById('characterAmountNumber');
-const lowercaseEl = document.getElementById('customSwitch1');
-const uppercaseEl = document.getElementById('customSwitch2');
-const numbersEl = document.getElementById('customSwitch3');
-const symbolsEl = document.getElementById('customSwitch4');
-const generateEl = document.getElementById('generate-btn');
-
-const randomFunc = {
-    lower: getRandomLower,
-    upper: getRandomUpper,
-    number: getRandomNumber,
-    symbol: getRandomSymbol
-};
 
 
 
-// Generator Functions
+var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "{", "}", "[", "]", ",", "."];
 
-function getRandomLower() {
-    return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+var all = []
+
+var Characters = prompt("In Numbers, how many Characters do you want for your password?")
+var wantLower = confirm("Do you want lowerCase Letters in your password?");
+var wantUpper = confirm("Do you want upperCase Letters in your password?");
+var wantNumbers = confirm("Do you want numbers in your password?");
+var wantSymbols = confirm("Do you want symbols Letters in your password?");
+
+if (wantLower === true) {
+    var all = all.concat(lowerCase); 
+}
+if (wantUpper === true) {
+    var all = all.concat(upperCase);
+}
+if (wantNumbers === true) {
+    var all = all.concat(numbers);
+}
+if (wantSymbols === true) {
+    var all = all.concat(symbols);
 }
 
-function getRandomUpper() {
-    return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+for (var i = 0; i < Characters; i++) {
+    document.write(all[Math.floor(Math.random() * all.length)])
 }
-
-function getRandomNumber() {
-    return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-}
-
-function getRandomSymbol() {
-    const symbols = '=!@#$%^&*(){}[]=<>/,.';
-    return symbols[Math.floor(Math.random() * symbols.length)];
-}
-
