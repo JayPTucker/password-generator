@@ -4,7 +4,7 @@ const wantLower = document.getElementById('lowercase');
 const wantUpper = document.getElementById('uppercase');
 const wantNumbers = document.getElementById('numbers');
 const wantSymbols = document.getElementById('symbols');
-const YourResult = document.getElementById('result');
+const passwordDisplay = document.getElementById('passwordDisplay');
 
 
 var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -30,7 +30,7 @@ generateEl.addEventListener('click', () => {
     }
 
     for (var i = 0; i < Characters.value; i++) {
-        document.write(all[Math.floor(Math.random() * all.length)])
+        document.write(all[Math.floor(Math.random() * all.length)]);
     }
 
 }) 
