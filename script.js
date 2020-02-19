@@ -38,6 +38,11 @@ document.querySelector("#generate-btn").addEventListener('click', ()=> {
     const randSelector = [];
     const password = [];
 
+    // Used to Alert the user if none of the properties are checked
+    if(upper === false && lower === false && numbers === false && symbols === false){
+        alert("ERROR! You must have at least 1 Value Checked below!")
+    }
+
     // Checkbox Determination
     if(upper === true) {
         for(let i=wantUpper[0]; i<= wantUpper[1]; i++) {
