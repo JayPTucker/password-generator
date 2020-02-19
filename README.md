@@ -9,24 +9,35 @@ My main inspiration was just knowing that I could definitely create this.  I've 
 
 This Project will easily solve anyones issue of; "I need a new, complicated, yet secure password!"  Just set the amount of Characters you want, Select what kind of Characters, Generate, and Copy!  Then make sure you have it written down somewhere or saved through Chrome/Edge so it's not lost.
 
+The Logo can be used to send you directly back to my Main Website.
+
+If you try to make a password without any of the Character Values checked you'll end up with an error.
+
 ## Installation:
 1.  Clone the file from my 
 [GitHub](https://github.com/JayPTucker/password-generator)
 2.  Put it somewhere you'll remember (Best Choice for Easy Access: In a Folder on your Desktop)
 3.  Open GitBash and cd directly into the directory.
-    - "cd desktop" > "cd JayPTucker.github.io" > Done!
+    - "cd desktop" > "cd password-generator" > Done!
 4.  Once you're CD'd inside of the Repository, type "code ." into GitBash and hit Enter.
 5.  VSCode should open (Or any other Software you use to code).
 6.  From there, you have all your files you need to begin coding.
-7.  Have fun!  Send me what you did! :D
+7.  Have fun!  Send me what you did!
 
 ## Usage:
-1.
-
+1.  First Thing you want to do is Set the Amount of Characters you would like in your Password by clicking the slider bar and adjusting it left-right
+2.  Once you've done that make sure the Checkboxes that are Checked are the TYPES of Characters you'd like in your Password.
+3.  Now, all you have to do is Click "Generate" and your new password will be created and placed into the blank white box below.
+4.  Finally, you can press the Copy Button that looks like a Clipboard and it'll Copy that new password you just created to your Clipboard.  All you have to do now is paste it whereever you want!  Don't forget it!
 
 ## Credits:
-
+Authors:
 - [Jay Paul Tucker](https://github.com/JayPTucker)
+
+Tutorials/Other Info:
+- [W3Schools](https://www.w3schools.com/)
+- [StackOverflow](https://stackoverflow.com/)
+- [YouTube: 1BestCsharp blog](https://www.youtube.com/watch?v=KVdY8n6lCy4)
 
 ## License:
 
