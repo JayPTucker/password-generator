@@ -2,38 +2,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="Assets/images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Assets/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
     <title>JPT - Password Generator</title>
 </head>
 <body>
 
   <div class="container">
       <div class="row justify-content-center">
-          <div class="passwordGen col-md-3">
-              <h4 class="title">Password Generator</h4>
-              <input type="number" min="1" max="50" id="length">
+          <div class="generatorBox col-md-5">
+              <a href="https://jayptucker.github.io"><img class="logo" src="Assets/images/favicon.png" width="75" height="75"></a><br>
+              <h2 class="title">Password Generator</h2>
+              <h6 class="howManyChars">How Many Characters do you want?</h6>
+              <input class="slider" type="range" min="8" max="128" name="slider" id="length">
+              <div id="lengthAmount"></div>
               <div class="checkbox custom-control custom-switch">
-                <input type="checkbox" id="lowercase">
-                <label>Lowercase Letters</label>
+                <input type="checkbox"  id="uppercase" value="on" checked>
+                <label id="checkBoxTitle">Capital Letters</label>
               </div>
               <div class="checkbox custom-control custom-switch">
-                <input type="checkbox"  id="uppercase">
-                <label>Capital Letters</label>
+                <input type="checkbox" id="lowercase" value="on" checked>
+                <label id="checkBoxTitle">Lowercase Letters</label>
               </div>
               <div class="checkbox custom-control custom-switch">
-                <input type="checkbox" id="numbers">
-                <label>Numbers</label>
+                <input type="checkbox" id="numbers" value="on" checked>
+                <label id="checkBoxTitle">Numbers</label>
               </div>
               <div class="checkbox custom-control custom-switch">
-                <input type="checkbox" id="symbols">
-                <label>Symbols</label>
+                <input type="checkbox" id="symbols" value="on" checked>
+                <label id="checkBoxTitle">Symbols</label>
               </div>
               <button class="btn btn-large" id="generate-btn">Generate Password</button>
-              <button class="btn btn-large" id="clearPass-btn">Clear Password</button>
-              <input type="text" id="passwordresult" placeholder="Your Results go Here!"/>
+              <div class="result-container">
+                <input class="input-class" id="result" placeholder="Press Generate!" maxlength="128"></input>
+                <button class="clipboard-box" id="clipboard" onclick="copyPassword()">
+                  <img class="clipboard-img" src="Assets/images/clipboard-icon.png" width="30" height="30">
+                </button>
+              </div>
           </div>
       </div>
+      <div class="page-container container-fluid">
+        <div class="content-wrap row">
+            <div class="footer col-md-12 text-center">
+                <p id="credits">Jay Paul Tucker <br>© since 2020</p>
+            </div>
+        </div>
+    </div>
   </div>
 
     <script src="script.js"></script>

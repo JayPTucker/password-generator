@@ -1,45 +1,67 @@
-// DOM ELEMENTS
-const Characters = document.getElementById('length');
-const generateEl = document.getElementById('generate-btn');
-const wantLower = document.getElementById('lowercase');
-const wantUpper = document.getElementById('uppercase');
-const wantNumbers = document.getElementById('numbers');
-const wantSymbols = document.getElementById('symbols');
-const password = document.getElementById('passwordresult');
-const clearPass = document.getElementById('clearPass-btn')
-
-// GENERATOR ITEMS
-var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-var symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "{", "}", "[", "]", ",", "."]
-var results = "";
+const results = document.querySelector("#result");
+const UNInum = [48,57];
+const UNIupper = [65,90];
+const UNIlower = [97,122];
+const UNIsym = [33,47];
 
 
-// THE GENERATOR
-generateEl.addEventListener('click', () => {
-    var all = []
+document.getElementById("lengthAmount").innerHTML = "Length: 68";
 
-    if (wantLower.checked) {
-        var all = all.concat(lowerCase)
+document.getElementById("length").oninput = function(){
+
+    if(document.getElementById("length").value > 0){
+        document.getElementById("lengthAmount").innerHTML = "Length: " + document.getElementById("length").value;
     }
-    if (wantUpper.checked) {
-        var all = all.concat(upperCase);
+    else{
+        document.getElementById("lengthAmount").innerHTML = "Length: 1";
     }
-    if (wantNumbers.checked) {
-        var all = all.concat(numbers);
-    }
-    if (wantSymbols.checked) {
-        var all = all.concat(symbols);
-    }
+}
 
-    for (var i = 0; i < Characters.value; i++) {
-        results += (all[Math.floor(Math.random() * all.length)]);
+document.querySelector("#generate-btn").addEventListener('click', ()=> {
+    const length = document.querySelector("#length").value;
+    const upper = document.querySelector("#uppercase").checked;
+    const lower = document.querySelector("#lowercase").checked;
+    const numbers = document.querySelector("#numbers").checked;
+    const symbols = document.querySelector("#symbols").checked;
+
+    const randSelector = [];
+    const password = [];
+
+    if(upper === true) {
+        for(let i=UNIupper[0]; i<= UNIupper[1]; i++) {
+            randSelector.push(i);
+        }
     }
+    if(numbers===true){
+        for(let i=UNInum[0]; i<= UNInum[1]; i++){
+            randSelector.push(i);
+        }
+    }
+    if(symbols===true){
+        for(let i=UNIsym[0]; i<= UNIsym[1]; i++){
+            randSelector.push(i);
+        }
+    }
+    if(lower===true){
+        for(let i=UNIlower[0]; i<= UNIlower[1]; i++){
+            randSelector.push(i);
+        }
+    }
+    
+    for(let i = 0; i< length; i++){
 
-    password.value = results;
-});
+    password.push(String.fromCharCode(randSelector[Math.floor(Math.random()*randSelector.length)]))
+    }
+        results.value = password.join("");
 
-clearPass.addEventListener('click', () => {
-    password.value = "";
 })
+
+function copyPassword(){
+
+    document.getElementById("result").select();
+
+    document.execCommand("Copy");
+
+    alert("Your Password has been Copied to your Clipboard!  Now just Paste it!");
+
+}
