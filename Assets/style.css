@@ -168,3 +168,9 @@ body {
     padding: 0px 20px;
   }
 }
+
+@media only screen and (max-width: 362px) {    
+  #result {
+    width: 75%;
+  }
+}
