@@ -1,4 +1,4 @@
-# J's Cookbook
+# Password Generator
 
 ![License](https://img.shields.io/badge/License-CCL-brightgreen) 
 
